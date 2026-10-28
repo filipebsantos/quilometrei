@@ -1,0 +1,20 @@
+{
+    "name": "quilometrei/app",
+    "description": "Aplicação para controle e acompanhamento de abastecimento e manutenção de veículos",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Quilometrei\\App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Filipe Bezerra",
+            "email": "filipebezerrasantos@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "4.*"
+    }
+}

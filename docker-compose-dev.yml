@@ -1,0 +1,29 @@
+services:
+  webserver:
+    build:
+      context: .
+      dockerfile: docker/nginx/Dockerfile
+    container_name: webserver
+    networks:
+      - "quilometrei_network"
+    ports:
+      - "80:80"
+    volumes:
+      - "./src/public:/var/www/html/public"
+      - "./conf/nginx/nginx.conf:/etc/nginx/nginx.conf"
+
+  quilometrei_app:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+      target: development
+    container_name: quilometrei_app
+    networks:
+      - "quilometrei_network"
+    volumes:
+      - "./src:/var/www/html"
+      - "./conf/php/php.ini-development:/usr/local/etc/php/php.ini"
+
+networks:
+  quilometrei_network:
+    name: "quilometrei_network"

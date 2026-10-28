@@ -1,0 +1,8 @@
+.devcontainer
+.git
+.gitignore
+.github
+.vscode
+.env
+.env.example
+/src/vendor

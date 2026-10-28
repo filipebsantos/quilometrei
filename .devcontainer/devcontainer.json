@@ -1,0 +1,16 @@
+{
+  "name": "Quilometrei",
+  "dockerComposeFile": ["../docker-compose-dev.yml"],
+  "service": "quilometrei_app",
+  "workspaceFolder": "/var/www/html",
+  "remoteUser": "developer",
+  "postCreateCommand": "composer install --no-interaction",
+  "customizations": {
+    "vscode": {
+      "extensions": [   
+        "bmewburn.vscode-intelephense-client",
+        "openai.chatgpt"
+      ]
+    }
+  }
+}
